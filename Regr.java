@@ -31,7 +31,7 @@ public class Regr extends Frame{
 					int x=Integer.parseInt(t1.getText());
 					int y=Integer.parseInt(t2.getText());
 					if(x!=y){
-						new ErrDisegual();
+						new ErrNE();
 					}
 					else{
 						if(x<2||y<2){
