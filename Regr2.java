@@ -58,7 +58,7 @@ public class Regr2 extends Frame{
 				c.add(new Label("X average = "+ XAverage(fieldx),Label.LEFT));
 				c.add(new Label("Y average = "+ XAverage(fieldy),Label.LEFT));
 				c.add(new Label("Summation (X[i]-XAverage)*(Y[i]-YAverage) = "+ XimXperYimY(fieldx,fieldy)));
-				c.add(new Label("Value of a1 = "+ CalculateAone(fieldx,fieldx),Label.LEFT));
+				c.add(new Label("Value of a1 = "+ CalculateAone(fieldx,fieldy),Label.LEFT));
 				c.add(new Label("Value of a0 = "+ CalculateAzero(fieldx,fieldy),Label.LEFT));
 				c.add(new Label("Linear Regression equation is y = mx + q",Label.LEFT));
 				c.add(new Label("Value of m = "+ CalculateM(fieldx,fieldy),Label.LEFT));
@@ -68,6 +68,11 @@ public class Regr2 extends Frame{
 				final TextField rx;
 				c.add(rx=new TextField(""));
 				
+				((Button)bot1.add(new Button("Restart"))).addActionListener(new ActionListener(){
+					public void actionPerformed(ActionEvent e){
+						setVisible(false);
+					}	
+				});
 				((Button)bot1.add(new Button("Calculate Y"))).addActionListener(new ActionListener(){
 					public void actionPerformed(ActionEvent e){
 						if(rx.getText().isEmpty()){
